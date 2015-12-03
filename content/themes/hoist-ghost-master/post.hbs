@@ -1,0 +1,47 @@
+{{!< default}}
+{{#post}}
+
+<header>
+    <span><a href="{{@blog.url}}"><i class="fa fa-angle-left"></i>  {{@blog.title}}</a>  <time datetime="{{date format='DD MMM YYYY'}}"><div id="seperator">|</div>{{date format='DD MMM YYYY'}}</time> {{tags prefix="in "}}</span>
+</header>
+
+
+
+<article class="{{post_class}} full-post">
+
+<h1 class="post-title">{{{title}}}</h1>
+    
+<section class="post-content">
+        {{content}}
+</section>
+
+<footer class="post-footer">
+
+    <section class="author">
+         <img src="{{author.image}}" class="profileimage"> 
+
+        <p>
+            <strong><a href="{{#author}}{{url}}{{/author}}">Ecrit par {{author.name}}</a></strong>
+            <br>
+            {{author.bio}}
+        </p>
+    </section>
+
+    <div class="color-blocks">
+        <div class="twitter hidden">
+            <a href="#" target="_blank" id="twitter-link">
+                <h4>Discuss this article on twitter</h4>
+                <i class="fa fa-twitter"></i>
+            </a>
+       </div>       
+
+
+    </div>
+
+
+</footer>
+
+</article>
+
+    {{/post}}
+
